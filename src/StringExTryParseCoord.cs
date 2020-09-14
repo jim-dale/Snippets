@@ -1,11 +1,10 @@
 using System;
-using System.Text.RegularExpressions;
 
 namespace __Snippets__
 {
     internal static partial class StringExtensions
     {
-        internal static (bool success, double lat, double lng) TryParseCoordinates(this string str)
+        internal static (bool success, double lat, double lng) TryParseLatitudeLongitude(this string str)
         {
             (bool, double, double) result = default;
 
