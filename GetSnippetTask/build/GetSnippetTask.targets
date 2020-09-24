@@ -1,0 +1,10 @@
+﻿<Project>
+  <Target Name="GetSnippet" BeforeTargets="BeforeBuild">
+    <PropertyGroup>
+      <SnippetsNamespace Condition=" '$(SnippetsNamespace)' == '' ">$(RootNamespace)</SnippetsNamespace>
+    </PropertyGroup>
+    <GetSnippet Inputs="@(SnippetReference)" SnippetNamespace="$(SnippetsNamespace)" BaseUrl="$(SnippetBaseUrl)">
+      <Output TaskParameter="Outputs" ItemName="Compile" />
+    </GetSnippet>
+  </Target>
+</Project>
