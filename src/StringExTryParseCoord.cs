@@ -10,7 +10,11 @@ namespace __Snippets__
 
             if (string.IsNullOrWhiteSpace(str) == false)
             {
+#if (!NETSTANDARD && !NETCOREAPP)
+                var parts = str.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+#else
                 var parts = str.Split(',', StringSplitOptions.RemoveEmptyEntries);
+#endif
                 if (parts.Length == 2)
                 {
                     if (double.TryParse(parts[0].Trim(), out var lat)
