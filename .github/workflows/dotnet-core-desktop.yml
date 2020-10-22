@@ -20,12 +20,11 @@ jobs:
       with:
         dotnet-version: 3.1.301
 
-    # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
-    #- name: Setup MSBuild.exe
-    #  uses: microsoft/setup-msbuild@2008f912f56e61277eefaac6d1888b750582aa16
+    - name: Install dependencies for GetSnippetTask project
+      run: dotnet restore GetSnippetTask/GetSnippetTask.csproj
 
-    - name: Install dependencies
-      run: dotnet restore
+    - name: Install dependencies for SnippetsUnitTests project
+      run: dotnet restore unittests/SnippetsUnitTests.csproj
       
     - name: Build
       run: dotnet build GetSnippetTask/GetSnippetTask.csproj  --configuration Release --no-restore
