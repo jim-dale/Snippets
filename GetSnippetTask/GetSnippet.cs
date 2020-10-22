@@ -29,19 +29,22 @@ namespace GetSnippetTask
         public override bool Execute()
         {
             var outputs = new List<ITaskItem>();
-
+#if DEBUG
             Log.LogMessage(MessageImportance.High, $"SnippetNamespace: \"{SnippetNamespace}\"");
             Log.LogMessage(MessageImportance.High, $"BaseUrl: \"{BaseUrl}\"");
+#endif
 
             foreach (var item in Inputs)
             {
                 Log.LogMessage(MessageImportance.Low, $"ItemSpec: \"{item.ItemSpec}\"");
+#if DEBUG
                 foreach (var name in item.MetadataNames)
                 {
                     var value = item.GetMetadata(name as string);
 
                     Log.LogMessage(MessageImportance.High, $"\t{name}={value}");
                 }
+#endif
 
                 var outputFile = item.ItemSpec;
                 var remotePath = item.GetMetadata("RemotePath");
