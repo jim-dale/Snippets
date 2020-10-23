@@ -12,8 +12,7 @@
     <Description>MSBuild task to download code snippets from GitHub.</Description>
     <PackageTags></PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <VersionSuffix>build$([System.DateTime]::UtcNow.ToString('yyyyMMdd-HHmm'))</VersionSuffix>
+    <VersionPrefix>1.1.0.0</VersionPrefix>
   </PropertyGroup>
 
   <ItemGroup>
