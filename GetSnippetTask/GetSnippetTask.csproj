@@ -31,13 +31,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="buildMultiTargeting\GetSnippetTask.targets" />
     <None Remove="build\GetSnippetTask.targets" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Update="buildMultiTargeting\GetSnippetTask.targets">
-      <PackagePath>build\</PackagePath>
-    </Content>
   </ItemGroup>
 </Project>
