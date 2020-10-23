@@ -56,7 +56,7 @@
     <SnippetReference Include="$(SnippetOutputPath)StringExTryParseCoord.cs" RemotePath="src/StringExTryParseCoord.cs" Version="master" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="GetSnippetTask" Version="1.0.0-build20200924-1635" />
+    <PackageReference Include="GetSnippetTask" Version="1.1.0.0" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
