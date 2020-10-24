@@ -27,7 +27,7 @@ namespace __Snippets__
             return true;
         }
 
-        public static void StartMonitor(CancellationTokenSource cancellationTokenSource)
+        internal static void StartMonitor(CancellationTokenSource cancellationTokenSource)
         {
             _cancellationTokenSource = cancellationTokenSource;
 

@@ -14,7 +14,7 @@ namespace __Snippets__
             args.Cancel = true; // Don't exit immediately
         }
 
-        public static void StartMonitor(CancellationTokenSource cancellationTokenSource)
+        internal static void StartMonitor(CancellationTokenSource cancellationTokenSource)
         {
             _cancellationTokenSource = cancellationTokenSource;
 
